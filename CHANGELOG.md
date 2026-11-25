@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.2
+
+### 🐛 Bugfixes
+
+- hanndle undefined and null values in the function avoiding errors
+
 ## 1.0.1
 
 ### ⚙️ chore

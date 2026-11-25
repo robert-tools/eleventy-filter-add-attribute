@@ -13,6 +13,9 @@ const fn = (
     condition = true,
     options?: Record<string, any>
 ): string => {
+    if (value === undefined || value === null) {
+        return '';
+    }
     const pad = options?.pad ?? ' ';
     const pre = options?.pre ?? pad;
     const post = options?.post ?? pad;
