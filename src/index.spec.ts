@@ -5,14 +5,24 @@
  * @license MIT
  * @author Robert Willemelis <github.com/willi84>
  */
-import { sample } from './index';
+import { addAttribute } from './index';
 
-describe('@robert.tools/eleventy-filter-add-attribute', () => {
-    it('should return a eleventy-filter-add-attribute string', () => {
-        expect(sample('hello')).toBe('sample: hello');
+describe('addAttribute()', () => {
+    const FN = addAttribute;
+    it('should return a key=value attribute', () => {
+        expect(FN('value', 'key')).toBe(` key="value" `);
+        expect(FN('"value"', 'key')).toBe(` key='"value"' `);
+        expect(FN('"value"', 'key', true)).toBe(` key='"value"' `);
     });
-
-    it('should return a eleventy-filter-add-attribute string with empty input', () => {
-        expect(sample('')).toBe('sample: ');
+    it('should not return a key=value attribute', () => {
+        expect(FN('"value"', 'key', false)).toBe(``);
+    });
+    it('should return a key=value attribute without pad', () => {
+        expect(FN('value', 'key', true, { pad: '' })).toBe(`key="value"`);
+        expect(FN('"value"', 'key', true, { pad: '' })).toBe(`key='"value"'`);
+    });
+    it('should return a key=value attribute with different pad', () => {
+        expect(FN('value', 'key', true, { pre: '' })).toBe(`key="value" `);
+        expect(FN('value', 'key', true, { post: '' })).toBe(` key="value"`);
     });
 });

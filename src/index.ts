@@ -1,11 +1,21 @@
 /**
- * 🗂️ main module
- * @version 1.0.0
- * @date 2026-11-25
- * @license MIT
- * @author Robert Willemelis <github.com/willi84>
+ * 🎯 Adds an HTML attribute string based on the given value, key, and condition.
+ * @param {string} value ➡️ the value of the attribute
+ * @param {string} key ➡️ the key of the attribute
+ * @param {boolean} condition ➡️ whether to include the attribute or not
+ * @param {Record<string, any>} options ➡️ additional options for formatting
+ * @returns {string} 📤 the formatted attribute or an empty string
  */
-import type { SAMPLE } from './index.d';
-export function sample(value: SAMPLE): string {
-    return `sample: ${value}`;
-}
+
+export const addAttribute = (
+    value: string,
+    key: string,
+    condition = true,
+    options?: Record<string, any>
+): string => {
+    const pad = options?.pad ?? ' ';
+    const pre = options?.pre ?? pad;
+    const post = options?.post ?? pad;
+    const quote = value.indexOf('"') !== -1 ? "'" : '"';
+    return condition ? `${pre}${key}=${quote}${value}${quote}${post}` : '';
+};

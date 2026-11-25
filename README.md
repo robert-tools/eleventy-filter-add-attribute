@@ -13,17 +13,22 @@ npm install @robert.tools/eleventy-filter-add-attribute
 ### 📝 Sample usage
 
 ```typescript
-import { eleventy-filter-add-attribute } from '@robert.tools/eleventy-filter-add-attribute';
+import { addAttribute } from '@robert.tools/eleventy-filter-add-attribute';
 
-eleventy-filter-add-attribute('hello'); // 'eleventy-filter-add-attribute: hello'
+addAttribute('hello', 'myKey'); // ' myKey="hello" '
+addAttribute('hello', 'myKey', false); // ''  # condition=false
+```
+
+```nunjucks
+{% set myAttr = "hello" | addAttribute('myKey') %}
+<div {{ myAttr }}>
 ```
 
 ## 🗃️ commands
 
 After an npm install with `npm i` the following commands are available:
 
-* initialize placeholders: `npm run init <semantic>`
-* release a new version: `npm run release <semantic>`
+* adding attribute: `addAttribute`
 
 ## ⚖️ Notes
 
