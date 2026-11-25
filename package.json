@@ -1,7 +1,7 @@
 {
-    "name": "@robert.tools/sample",
-    "version": "1.1.10",
-    "description": "<description>",
+    "name": "@robert.tools/eleventy-filter-add-attribute",
+    "version": "1.0.0",
+    "description": "Adding attributes to a html element.",
     "main": "./dist/index.js",
     "types": "./dist/index.d.ts",
     "exports": {
@@ -25,20 +25,20 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/robert-tools/<name>.git"
+        "url": "git+https://github.com/robert-tools/eleventy-filter-add-attribute.git"
     },
     "bugs": {
-        "url": "https://github.com/robert-tools/<name>/issues"
+        "url": "https://github.com/robert-tools/eleventy-filter-add-attribute/issues"
     },
-    "homepage": "https://github.com/robert-tools/<name>#readme",
+    "homepage": "https://github.com/robert-tools/eleventy-filter-add-attribute#readme",
     "keywords": [
         "typescript",
         "node",
-        "<name>",
+        "eleventy-filter-add-attribute",
         "robert.tools"
     ],
-    "author": "<author>",
-    "license": "<license>",
+    "author": "Robert Willemelis",
+    "license": "MIT",
     "engines": {
         "node": ">=22"
     },

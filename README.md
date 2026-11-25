@@ -1,21 +1,21 @@
-# 🗂️ @robert.tools/sample
+# 🗂️ @robert.tools/eleventy-filter-add-attribute
 
-<description>
+Adding attributes to a html element.
 
 ## 📜 Usage
 
 ### 🟢 Installation
 
 ```bash
-npm install @robert.tools/sample
+npm install @robert.tools/eleventy-filter-add-attribute
 ```
 
 ### 📝 Sample usage
 
 ```typescript
-import { <name> } from '@robert.tools/sample';
+import { eleventy-filter-add-attribute } from '@robert.tools/eleventy-filter-add-attribute';
 
-<name>('hello'); // '<name>: hello'
+eleventy-filter-add-attribute('hello'); // 'eleventy-filter-add-attribute: hello'
 ```
 
 ## 🗃️ commands
