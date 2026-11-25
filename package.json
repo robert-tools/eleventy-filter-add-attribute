@@ -1,6 +1,6 @@
 {
     "name": "@robert.tools/eleventy-filter-add-attribute",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Adding attributes to a html element.",
     "main": "./dist/index.js",
     "types": "./dist/index.d.ts",

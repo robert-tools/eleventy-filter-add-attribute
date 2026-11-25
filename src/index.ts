@@ -7,7 +7,7 @@
  * @returns {string} 📤 the formatted attribute or an empty string
  */
 
-export const addAttribute = (
+const fn = (
     value: string,
     key: string,
     condition = true,
@@ -19,3 +19,5 @@ export const addAttribute = (
     const quote = value.indexOf('"') !== -1 ? "'" : '"';
     return condition ? `${pre}${key}=${quote}${value}${quote}${post}` : '';
 };
+
+export default fn;

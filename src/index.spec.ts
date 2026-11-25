@@ -1,14 +1,14 @@
 /**
  * 🧪 testing module
- * @version 1.0.0
+ * @version 1.0.1
  * @date 2026-11-25
  * @license MIT
  * @author Robert Willemelis <github.com/willi84>
  */
-import { addAttribute } from './index';
+import fn from './index';
 
 describe('addAttribute()', () => {
-    const FN = addAttribute;
+    const FN = fn;
     it('should return a key=value attribute', () => {
         expect(FN('value', 'key')).toBe(` key="value" `);
         expect(FN('"value"', 'key')).toBe(` key='"value"' `);
