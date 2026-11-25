@@ -17,6 +17,7 @@ import { addAttribute } from '@robert.tools/eleventy-filter-add-attribute';
 
 addAttribute('hello', 'myKey'); // ' myKey="hello" '
 addAttribute('hello', 'myKey', false); // ''  # condition=false
+addAttribute('', 'myKey', true, { keyOnly: true }); // ' myKey '  # condition=false
 ```
 
 ```nunjucks

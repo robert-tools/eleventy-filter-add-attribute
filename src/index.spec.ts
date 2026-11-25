@@ -1,6 +1,6 @@
 /**
  * 🧪 testing module
- * @version 1.0.2
+ * @version 1.1.0
  * @date 2026-11-25
  * @license MIT
  * @author Robert Willemelis <github.com/willi84>
@@ -28,5 +28,10 @@ describe('addAttribute()', () => {
     it('should return a key=value attribute with different pad', () => {
         expect(FN('value', 'key', true, { pre: '' })).toBe(`key="value" `);
         expect(FN('value', 'key', true, { post: '' })).toBe(` key="value"`);
+    });
+    it('should return just the key', () => {
+        expect(FN('', 'key', true, { keyOnly: true })).toBe(` key `);
+        expect(FN(undefined as any, 'k', true, { keyOnly: true })).toBe(` k `);
+        expect(FN(null as any, 'key', true, { keyOnly: true })).toBe(` key `);
     });
 });

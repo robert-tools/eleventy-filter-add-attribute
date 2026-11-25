@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.0
+
+### ✨ improvements
+
+- add keyOnly option to return just the key without value
+
 ## 1.0.2
 
 ### 🐛 Bugfixes

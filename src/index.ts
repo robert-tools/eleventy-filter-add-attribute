@@ -13,14 +13,16 @@ const fn = (
     condition = true,
     options?: Record<string, any>
 ): string => {
-    if (value === undefined || value === null) {
+    const isKeyOnly = options?.keyOnly ?? false;
+    if (!isKeyOnly && (value === undefined || value === null)) {
         return '';
     }
     const pad = options?.pad ?? ' ';
     const pre = options?.pre ?? pad;
     const post = options?.post ?? pad;
-    const quote = value.indexOf('"') !== -1 ? "'" : '"';
-    return condition ? `${pre}${key}=${quote}${value}${quote}${post}` : '';
+    const quote = !isKeyOnly && value.indexOf('"') !== -1 ? "'" : '"';
+    const val = isKeyOnly ? '' : `=${quote}${value}${quote}`;
+    return condition ? `${pre}${key}${val}${post}` : '';
 };
 
 export default fn;
